@@ -469,11 +469,9 @@ footer h2 {
 @media screen and (max-width: 740px) {
   nav {
     display: none;
-    font-size: 14px;
   }
   .nav-shown {
     display: flex;
-    margin: 0;
   }
   .logo-hidden {
     display: none;
@@ -508,6 +506,9 @@ footer h2 {
   }
 }
 @media screen and (max-width: 590px) {
+  .nav-shown {
+    gap: 18px;
+  }
   section {
     padding: 50px 40px;
   }
@@ -524,4 +525,23 @@ footer h2 {
   #projects img {
     width: 90%;
   }
+}
+@media screen and (max-width: 510px) {
+  .nav-shown,
+  .menu-button {
+    display: none;
+  }
+  .logo-hidden {
+    display: inline-block;
+    margin: 0px auto;
+  }
+  /* nav {
+    flex-direction: column;
+  }
+  header {
+    min-height: var(--header-height);
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  } */
 }
