@@ -105,7 +105,7 @@ header {
   padding: 0px 40px;
 
   background-color: inherit;
-  opacity: 0.95;
+  opacity: 0.97;
 
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -117,9 +117,10 @@ header {
 nav {
   gap: 36px;
   display: flex;
+  align-items: center;
   /* background-color: lightgreen; */
 }
-.nav-shown {
+.nav-update {
   display: flex;
 }
 .logo-hidden {
@@ -130,21 +131,28 @@ nav {
   text-decoration: underline transparent;
   transition: all 0.3s ease;
 }
+.menu-button,
+.lets-talk-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .menu-button {
-  border: 1px solid var(--purple);
-  border-radius: 3px;
-  color: var(--purple);
-  font-size: 24px;
-  padding: 4px 8px;
+  aspect-ratio: 1/1;
+  width: 40px;
+
+  border-radius: 50%;
+  font-size: 28px;
+  color: black;
+
   display: none;
+}
+.menu-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .lets-talk-button {
   font-size: 18px;
   font-weight: bold;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   padding: 8px 24px 8px 24px;
 
@@ -154,21 +162,22 @@ nav {
 
   white-space: nowrap;
 }
-.lets-talk-button:hover,
-.menu-button:hover {
+.lets-talk-button:hover {
   background-color: var(--purple);
   color: white;
 }
-.lets-talk-button:active,
-.menu-button:active {
+.lets-talk-button:active {
   background-color: var(--purple-light);
 }
 header .lets-talk-button {
   margin-left: 38px;
 }
 section {
-  padding: 100px 80px;
-  min-height: calc(100vh - var(--header-height) + 60px);
+  padding-block: 100px;
+  padding-inline: 80px;
+  padding-top: calc(var(--header-height) + 40px);
+  min-height: calc(100vh - var(--header-height));
+  border-bottom: 0.67px solid grey;
 }
 #home {
   display: flex;
@@ -196,7 +205,7 @@ p span {
   width: 250px;
 }
 #about {
-  min-width: none;
+  min-height: none;
   /*change this if displaying image*/
 }
 .about-container {
@@ -484,9 +493,9 @@ footer h2 {
     margin: 0;
     margin-left: auto;
   }
-  section {
+  /* section {
     padding: 150px 120px;
-  }
+  } */
   h1 {
     font-size: 32px;
   }
@@ -513,7 +522,7 @@ footer h2 {
     gap: 18px;
   }
   section {
-    padding: 50px 40px;
+    padding-inline: 40px;
   }
   h1 {
     font-size: 30px;
@@ -533,13 +542,21 @@ footer h2 {
   nav {
     flex-direction: column;
     gap: 13px;
+    margin: 0px auto;
+    justify-content: space-evenly;
+
+    height: calc(100vh - (1 * var(--header-height)));
+
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+
+    font-size: 14px;
+    background-color: inherit;
+    box-shadow: var(--shadow);
   }
-  .header-expand {
-    height: 225px;
-  }
-  .body-down {
-    padding-top: 225px;
-  }
-  .menu-button-down {
+  .header-update {
+    justify-content: center;
   }
 }
