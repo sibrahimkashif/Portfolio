@@ -19,7 +19,12 @@
       <a href="#" class="header-logo">
         Ibrahim Kashif
       </a>
-      <nav onclick="displayMenu()">
+      <nav onclick="
+        if (document.querySelector('nav').classList.contains('nav-update')) {
+          displayMenu()
+        }
+      "
+      >
         <a href="#" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
@@ -47,7 +52,7 @@
           </h1>
         </div>
         <p class="home-text-details">
-          I help organizations and individuals cultivate a strong digital presence by developing <span>eye catching</span> websites.
+          I help businesses cultivate a strong digital presence by developing <span>eye-catching</span> websites.
         </p>
         <a href="mailto:ibrahimkashif399@gmail.com" class="lets-talk-button">
           Lets Talk
@@ -130,7 +135,7 @@
       <div class="projects-container">
         <div class="project-card">
           <div class="project-card-top">
-            <img src="img/mock-up1.png" alt="">
+            <img src="img/mock-up1.png" alt="project-preview">
           </div>
           <div class="project-card-bottom">
             <h2>YouTube Clone</h2>
@@ -142,7 +147,7 @@
         </div>
         <div class="project-card">
           <div class="project-card-top">
-            <img src="img/mock-up2.png" alt="">
+            <img src="img/mock-up2.png" alt="project-preview">
           </div>
           <div class="project-card-bottom">
             <h2>Google Clone</h2>
@@ -156,7 +161,7 @@
         </div>
         <div class="project-card">
           <div class="project-card-top">
-            <img src="img/mock-up3.png" alt="">
+            <img src="img/mock-up3.png" alt="project-preview">
           </div>
           <div class="project-card-bottom">
             <h2>Code Academy</h2>
@@ -234,7 +239,7 @@
       <div class="footer-left">
         <p>Lets be Friends!</p>
         <div class="socials">
-          <a href="https://www.instagram.com/f399vfx/">
+          <a href="https://www.instagram.com/">
             <i class="bx bxl-instagram"></i>
           </a>
           <a href="https://www.facebook.com/">

@@ -32,20 +32,22 @@ a {
   border: none;
   color: inherit;
 }
+nav,
 h1,
 h2,
-button,
+.lets-talk-button,
 #projects a,
 #home a {
   font-family: "Segoe UI";
 }
-header,
-#home p,
+.header-logo,
 #about p,
 .review-card > p,
 footer {
   font-family: "space grotesk";
 }
+
+#home p,
 #skills p,
 .project-card,
 .client-name,
@@ -60,7 +62,7 @@ footer {
 }
 #home p,
 #about p {
-  font-size: 20px;
+  font-size: 18px;
 }
 .skill-card i,
 .review-card i {
@@ -144,6 +146,7 @@ nav {
   border-radius: 50%;
   font-size: 28px;
   color: black;
+  background-color: transparent;
 
   display: none;
 }
@@ -200,13 +203,11 @@ h1 span {
   color: var(--purple);
 }
 p span {
-  color: var(--design);
+  color: #00adfd;
   /* font-style: italic; */
 }
 #home img {
   width: 250px;
-}
-#about {
 }
 .about-container {
   display: flex;
