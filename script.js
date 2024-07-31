@@ -5,13 +5,14 @@ function displayMenu() {
   const logo = document.querySelector(".header-logo");
   const header = document.querySelector("header");
   const body = document.body;
+  const navLink = document.querySelector(".nav-link");
 
   if (menuIcon.classList.contains("bx-menu")) {
-    menuIcon.classList.remove("bx-menu");
-    menuIcon.classList.add("bx-x");
+    menuIcon.classList.toggle("bx-menu");
+    menuIcon.classList.toggle("bx-x");
   } else if (menuIcon.classList.contains("bx-x")) {
-    menuIcon.classList.remove("bx-x");
-    menuIcon.classList.add("bx-menu");
+    menuIcon.classList.toggle("bx-x");
+    menuIcon.classList.toggle("bx-menu");
   }
 
   nav.classList.toggle("nav-update");

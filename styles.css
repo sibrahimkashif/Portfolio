@@ -552,7 +552,7 @@ footer h2 {
     left: 0;
     right: 0;
 
-    font-size: 14px;
+    /* font-size: 14px; */
     background-color: inherit;
     box-shadow: var(--shadow);
   }
