@@ -6,7 +6,7 @@ html {
   --header-height: 70px;
   --grey: rgb(84, 84, 84);
   --bg-grey: grey;
-  --green: #0f4644;
+  --green: #176866;
   --purple: hsl(260, 90%, 56%);
   --purple-light: hsl(260, 90%, 64%);
   --shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,8 @@ a {
 h1,
 h2,
 button,
-#projects > a {
+#projects a,
+#home a {
   font-family: "Segoe UI";
 }
 header,
@@ -62,9 +63,10 @@ footer {
   font-size: 20px;
 }
 .skill-card i,
-.stars,
+.review-card i,
 .lets-talk-button i {
   font-size: 24px;
+  transition: all 0.3s;
 }
 .header-logo,
 .nav-link,
@@ -116,6 +118,12 @@ nav {
   gap: 36px;
   display: flex;
   /* background-color: lightgreen; */
+}
+.nav-shown {
+  display: flex;
+}
+.logo-hidden {
+  display: none;
 }
 .nav-link {
   padding: 2px;
@@ -181,7 +189,8 @@ h1 span {
   color: var(--purple);
 }
 p span {
-  color: #ff0000;
+  color: var(--design);
+  /* font-style: italic; */
 }
 #home img {
   width: 250px;
@@ -295,7 +304,7 @@ p span {
   background-color: var(--bg-grey);
   border-radius: 10px;
 }
-#projects img {
+.project-card-top img {
   width: 90%;
 }
 .project-card-bottom {
@@ -340,7 +349,7 @@ p span {
   box-shadow: var(--shadow);
   background-color: white;
 }
-.stars i {
+.review-card i {
   color: var(--green);
 }
 .review-card > p,
@@ -470,12 +479,6 @@ footer h2 {
   nav {
     display: none;
   }
-  .nav-shown {
-    display: flex;
-  }
-  .logo-hidden {
-    display: none;
-  }
   .menu-button {
     display: inline-block;
     margin: 0;
@@ -506,7 +509,7 @@ footer h2 {
   }
 }
 @media screen and (max-width: 590px) {
-  .nav-shown {
+  nav {
     gap: 18px;
   }
   section {
@@ -527,21 +530,16 @@ footer h2 {
   }
 }
 @media screen and (max-width: 510px) {
-  .nav-shown,
-  .menu-button {
-    display: none;
-  }
-  .logo-hidden {
-    display: inline-block;
-    margin: 0px auto;
-  }
-  /* nav {
+  nav {
     flex-direction: column;
+    gap: 13px;
   }
-  header {
-    min-height: var(--header-height);
-    height: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  } */
+  .header-expand {
+    height: 225px;
+  }
+  .body-down {
+    padding-top: 225px;
+  }
+  .menu-button-down {
+  }
 }
