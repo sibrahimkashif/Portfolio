@@ -63,8 +63,7 @@ footer {
   font-size: 20px;
 }
 .skill-card i,
-.review-card i,
-.lets-talk-button i {
+.review-card i {
   font-size: 24px;
   transition: all 0.3s;
 }
@@ -73,7 +72,8 @@ footer {
 .copyright-links,
 .client-name,
 .client-company,
-.skill-card-top {
+.skill-card-top,
+button {
   white-space: nowrap;
 }
 .nav-link:hover,
@@ -159,8 +159,9 @@ nav {
   border-radius: 50px;
   border: 2px solid var(--purple);
   transition: all 0.3s;
-
-  white-space: nowrap;
+}
+.lets-talk-button i {
+  font-size: 24px;
 }
 .lets-talk-button:hover {
   background-color: var(--purple);
@@ -173,17 +174,18 @@ header .lets-talk-button {
   margin-left: 38px;
 }
 section {
-  padding-block: 100px;
   padding-inline: 80px;
-  padding-top: calc(var(--header-height) + 40px);
+  padding-block: calc(var(--header-height) + 40px);
   min-height: calc(100vh - var(--header-height));
-  border-bottom: 0.67px solid grey;
+  border-bottom: 0.33px solid grey;
 }
 #home {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
+
+  padding-block: 40px;
 }
 .home-left {
   display: flex;
@@ -212,6 +214,11 @@ p span {
   display: flex;
   justify-content: center;
   gap: 40px;
+}
+.about-container,
+.skills-container,
+.projects-container,
+.reviews-container {
   margin-top: 40px;
 }
 #about img {
@@ -231,13 +238,15 @@ p span {
   font-family: "space grotesk", "questrial";
   line-height: 28px;
 }
-.skills-container {
+.skills-container,
+.projects-container,
+.reviews-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 40px;
   row-gap: 40px;
-  margin-top: 70px;
-  /* background-color: lightgreen; */
+}
+.skills-container {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .skill-card {
   display: flex;
@@ -288,12 +297,12 @@ p span {
 #skills p {
   color: #1c1e53;
 }
-.projects-container {
-  display: grid;
+.projects-container,
+.reviews-container {
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 40px;
-  row-gap: 40px;
-  margin: 40px 0px;
+}
+.projects-container {
+  margin-bottom: 40px;
 }
 .project-card {
   display: flex;
@@ -336,13 +345,6 @@ p span {
 #projects a:hover {
   text-decoration: underline;
   color: var(--green);
-}
-.reviews-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 40px;
-  row-gap: 40px;
-  margin-top: 40px;
 }
 .review-card {
   display: flex;
@@ -460,7 +462,6 @@ footer h2 {
   h1 {
     font-size: 34px;
   }
-
   .skills-container,
   .projects-container,
   .reviews-container {
@@ -493,9 +494,6 @@ footer h2 {
     margin: 0;
     margin-left: auto;
   }
-  /* section {
-    padding: 150px 120px;
-  } */
   h1 {
     font-size: 32px;
   }
@@ -541,11 +539,11 @@ footer h2 {
 @media screen and (max-width: 510px) {
   nav {
     flex-direction: column;
-    gap: 13px;
+    gap: unset;
     margin: 0px auto;
     justify-content: space-evenly;
 
-    height: calc(100vh - (1 * var(--header-height)));
+    height: calc(100vh - (2 * var(--header-height)));
 
     position: absolute;
     top: var(--header-height);
