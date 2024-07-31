@@ -176,7 +176,7 @@ header .lets-talk-button {
 section {
   padding-inline: 80px;
   padding-block: calc(var(--header-height) + 40px);
-  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height) + 40px);
   border-bottom: 0.33px solid grey;
 }
 #home {
@@ -207,8 +207,6 @@ p span {
   width: 250px;
 }
 #about {
-  min-height: none;
-  /*change this if displaying image*/
 }
 .about-container {
   display: flex;
@@ -232,11 +230,10 @@ p span {
 .about-right {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 #about p {
-  font-family: "space grotesk", "questrial";
-  line-height: 28px;
+  line-height: 1.5;
 }
 .skills-container,
 .projects-container,
