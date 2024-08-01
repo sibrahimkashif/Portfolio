@@ -428,7 +428,7 @@ footer h2 {
   }
   #home p,
   #about p {
-    font-size: 18px;
+    font-size: 20px;
   }
   #home img {
     width: 225px;
@@ -492,6 +492,9 @@ footer h2 {
     margin: 0;
     margin-left: auto;
   }
+  .logo-update {
+    display: none;
+  }
   h1 {
     font-size: 32px;
   }
@@ -548,11 +551,13 @@ footer h2 {
     left: 0;
     right: 0;
 
-    /* font-size: 14px; */
     background-color: inherit;
     box-shadow: var(--shadow);
   }
   .header-update {
     justify-content: center;
+  }
+  .logo-update {
+    display: flex;
   }
 }
