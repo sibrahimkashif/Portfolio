@@ -12,7 +12,7 @@ function displayMenu() {
     menuIcon.classList.toggle("bx-menu");
   }
 
-  nav.classList.toggle("nav-update");
+  nav.classList.toggle("nav-shown");
   header.classList.toggle("header-update");
   logo.classList.toggle("logo-update");
 }

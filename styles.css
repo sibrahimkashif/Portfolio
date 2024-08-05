@@ -78,7 +78,6 @@ footer {
 button {
   white-space: nowrap;
 }
-.nav-link:hover,
 footer .gmail:hover,
 .footer-right a:hover {
   text-decoration: underline;
@@ -90,7 +89,6 @@ footer .gmail:hover,
   object-fit: cover;
   border-radius: 50%;
 }
-
 header {
   display: flex;
   justify-content: end;
@@ -117,13 +115,26 @@ header {
   font-weight: bold;
 }
 nav {
-  gap: 36px;
+  width: 450px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   /* background-color: lightgreen; */
 }
-.nav-update {
-  display: flex;
+nav a {
+  padding: 0px auto;
+  transition: 0.3s all;
+}
+nav a:hover {
+  transform: scale(1.2);
+
+  opacity: 0.8;
+  /* color: #32343a; */
+  color: var(--purple);
+  font-weight: 600;
+}
+nav a:active {
+  color: var(--purple-light);
 }
 .logo-hidden {
   display: none;
@@ -420,6 +431,9 @@ footer h2 {
   gap: 20px;
 }
 @media screen and (max-width: 1060px) {
+  nav {
+    width: 400px;
+  }
   .lets-talk-button {
     font-size: 16px;
   }
@@ -518,7 +532,6 @@ footer h2 {
 }
 @media screen and (max-width: 590px) {
   nav {
-    gap: 18px;
   }
   section {
     padding-inline: 40px;
@@ -539,12 +552,15 @@ footer h2 {
 }
 @media screen and (max-width: 510px) {
   nav {
+    display: none;
+
     flex-direction: column;
-    gap: unset;
-    margin: 0px auto;
     justify-content: space-evenly;
+    gap: unset;
+    margin: 0px;
 
     height: calc(100vh - (2 * var(--header-height)));
+    width: 100%;
 
     position: absolute;
     top: var(--header-height);
@@ -553,6 +569,9 @@ footer h2 {
 
     background-color: inherit;
     box-shadow: var(--shadow);
+  }
+  .nav-shown {
+    display: flex;
   }
   .header-update {
     justify-content: center;
