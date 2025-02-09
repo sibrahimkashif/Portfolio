@@ -232,7 +232,8 @@ h1 span {
 }
 
 p span {
-  color: #00adfd;
+  /* color: #00adfd; */
+  color: var(--purple);
 }
 
 #home img {
